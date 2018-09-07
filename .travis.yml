@@ -1,3 +1,4 @@
+language: minimal
 sudo: required
 services:
   - docker
@@ -18,3 +19,6 @@ deploy:
     on:
       branch: master
       tags: true
+env:
+  - JAVA_TAG=8 JAVA_VERSION=8u181-jdk-5 GRADLE_VERSION=4.9 BUILD_ARGS="JAVA_TAG JAVA_VERSION GRADLE_VERSION"
+  - JAVA_TAG=10 JAVA_VERSION=10.0.2-jdk-5 GRADLE_VERSION=4.9 BUILD_ARGS="JAVA_TAG JAVA_VERSION GRADLE_VERSION"
